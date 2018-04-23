@@ -1,9 +1,11 @@
-# Ignore docs files
+# Ignored files
 _gh_pages
 _site
 .ruby-version
 .sass-cache/
 .jekyll-metadata
+gulpfile.js
+package-lock.json
 
 # Numerous always-ignore extensions
 *.diff

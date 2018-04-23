@@ -2,7 +2,39 @@
 layout: default
 ---
 
-<div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
+<div id="inner-content" class="row">
+    <div class="small-24 columns">
+        <img width="970" height="300" src="{{ site.baseurl }}/assets/images/{{ page.hero-image }}.jpg" class="" alt="" srcset="{{ site.baseurl }}/assets/images/{{ page.hero-image }}.jpg 970w, {{ site.baseurl }}/assets/images/{{ page.hero-image }}-300x93.jpg 300w, {{ site.baseurl }}/assets/images/{{ page.hero-image }}-768x238.jpg 768w" sizes="(max-width: 970px) 100vw, 970px"> </div>
+    <main id="main" class="large-16 medium-16 columns" role="main">
+        <article id="post-7" class="post-7 page type-page status-publish has-post-thumbnail hentry" role="article" itemscope="" itemtype="http://schema.org/WebPage">
+
+          <h1 class="page-title">{{ page.page-title }}</h1>
+
+          <section class="entry-content" itemprop="articleBody">
+            {{ content }}
+          </section> <!-- end article section -->
+
+        </article>
+        <!-- end article -->
+    </main>
+    <!-- end #main -->
+    <div id="sidebar1" class="sidebar large-8 medium-8 columns" role="complementary">
+        <!-- This content shows up if there are no widgets defined in the backend. -->
+        <div class="alert help">
+            <!--    <p>-->
+            <!--</p>-->
+        </div>
+        <div class="sidebar-cta-box">
+            <div class="button">
+                Kostenlose Erstberatung:
+                <br>
+                <span class="spacer">&nbsp;</span> 089 / 416 120 10
+            </div>
+            <div class="button">
+                Hier geht es zum
+                <br>
+                <a href="/kontakt/">Kontaktformular</a>
+            </div>
+        </div>
+    </div>
 </div>
