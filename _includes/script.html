@@ -1,0 +1,17 @@
+<script type='text/javascript' src='/assets/js/what-input.min.js'></script>
+<script type='text/javascript' src='/assets/js/foundation.js'></script>
+<script type='text/javascript' src='/assets/js/scripts.js'></script>
+{% if page.title == 'Home' %}
+<script>
+  jQuery(function($) {
+
+    $("h1")
+        .wrapInner("<span>");
+
+    $("h1 br")
+        .before("<span class='spacer'>")
+        .after("<span class='spacer'>");
+
+});
+</script>
+{% endif %}

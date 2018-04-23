@@ -1,0 +1,13 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+baseurl: ""
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            dachmedia.de
+url:              http://www.dachmedia.de
+
+repository:       dmedia/rendrap

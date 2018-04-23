@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de-DE">
+
+  {% include head.html %}
+
+  <body class="home page-template-default page page-id-2">
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+        {% include off-canvas-menu.html %}
+        <div class="off-canvas-content" data-off-canvas-content="">
+          {% include header.html %}
+
+        <div id="content">
+          {{ content }}
+        </div>
+
+          {% include footer.html %}
+        </div>  <!-- end .main-content -->
+      </div> <!-- end .off-canvas-wrapper-inner -->
+    </div> <!-- end .off-canvas-wrapper -->
+
+    {% include script.html %}
+  </body>
+</html>
