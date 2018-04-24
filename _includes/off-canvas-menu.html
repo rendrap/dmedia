@@ -1,18 +1,41 @@
 <div class="off-canvas position-right show-for-small-only is-open" id="off-canvas" data-off-canvas="iladyx-off-canvas" data-position="right" aria-hidden="false" tabindex="-1">
     <ul id="menu-main-menu" class="vertical menu" data-accordion-menu="rmvktw-accordion-menu" role="menu" aria-multiselectable="true">
+        {% for item in site.data.topnav %}
+            {% if item.name == page.title %}
+            {% assign active_class = "active" %}
+            {% else %}
+            {% assign active_class = "" %}
+            {% endif %}
+
+            {% if item.children %}
+            <li class="{{active_class}} is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="Leistungen" aria-controls="xhu17n-acc-menu"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a>
+                <ul class="vertical menu is-accordion-submenu" data-submenu="" aria-hidden="true" role="menu" id="xhu17n-acc-menu" style="display: none;">
+                    {% for child in item.children %}
+                    {% if page.url contains child.path %}{% assign active = 'actives' %}{% else %}{% assign active = '' %}{% endif %}
+                    <li class="{{ active }} is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}{{ child.path }}">{{ child.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% else %}
+            <li class="{{active_class}}"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- <ul id="menu-main-menu" class="vertical menu" data-accordion-menu="rmvktw-accordion-menu" role="menu" aria-multiselectable="true">
         <li class="active"><a href="{{ site.baseurl }}/" tabindex="0">Home</a></li>
         <li><a href="{{ site.baseurl }}/service/">Service</a></li>
         <li class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="Leistungen" aria-controls="xhu17n-acc-menu"><a href="{{ site.baseurl }}/leistungen/">Leistungen</a>
             <ul class="vertical menu is-accordion-submenu" data-submenu="" aria-hidden="true" role="menu" id="xhu17n-acc-menu" style="display: none;">
-                <li class="is-submenu-item is-accordion-submenu-item"><a href="{{ site.baseurl }}/beratung-internet-marketing/">Beratung Internet Marketing</a></li>
-                <li is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/content-marketing/">Content Marketing</a></li>
-                <li is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/content-management/">Content Management</a></li>
-                <li is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/conversion-optimierung/">Conversion Optimierung</a></li>
-                <li is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/redaktion/">Redaktion</a></li>
-                <li is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/online-werbung/">Online Werbung</a></li>
+                <li class="is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/beratung-internet-marketing/">Beratung Internet Marketing</a></li>
+                <li class="is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/content-marketing/">Content Marketing</a></li>
+                <li class="is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/content-management/">Content Management</a></li>
+                <li class="is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/conversion-optimierung/">Conversion Optimierung</a></li>
+                <li class="is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/redaktion/">Redaktion</a></li>
+                <li class="is-submenu-item is-accordion-submenu-item" role="menuitem"><a href="{{ site.baseurl }}/online-werbung/">Online Werbung</a></li>
             </ul>
         </li>
         <li><a href="{{ site.baseurl }}/agentur/">Agentur</a></li>
         <li><a href="{{ site.baseurl }}/kontakt/">Kontakt</a></li>
-    </ul>
-</div>
+    </ul> -->

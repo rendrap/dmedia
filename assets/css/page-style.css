@@ -852,3 +852,7 @@ ADDITIONAL CSS
 #main > article > section > p:last-child {
     margin-bottom: 0;
 }
+
+.menu li.actives a {
+    color: cornflowerblue;
+}
