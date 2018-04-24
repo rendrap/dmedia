@@ -1,0 +1,23 @@
+- name: Internet Marketing
+  path: /beratung-internet-marketing/
+  img: beratung-internet-marketing-550.jpg
+
+- name: Content Marketing
+  path: /content-marketing/
+  img: content-marketing-550.jpg
+
+- name: Content Management
+  path: /content-management/
+  img: content-management-550.jpg
+
+- name: Conversion Optimierung
+  path: /conversion-optimierung/
+  img: conversion-optimierung-550.jpg
+
+- name: Redaktion
+  path: /redaktion/
+  img: online-redaktion-550.jpg
+
+- name: Online Werbung
+  path: /online-werbung/
+  img: online-werbung-550.jpg

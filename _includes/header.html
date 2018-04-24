@@ -25,7 +25,8 @@
                                 <li class="{{active_class}} is-dropdown-submenu-parent"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a>
                                     <ul class="menu">
                                         {% for child in item.children %}
-                                        <li><a href="{{ site.baseurl }}{{ child.path }}">{{ child.name }}</a></li>
+                                        {% if page.url contains child.path %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
+                                        <li class="{{ active }}"><a href="{{ site.baseurl }}{{ child.path }}">{{ child.name }}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>

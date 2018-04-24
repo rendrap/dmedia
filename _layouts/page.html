@@ -3,12 +3,19 @@ layout: default
 ---
 
 <div id="inner-content" class="row">
+    {% if page.hero-image %}
     <div class="small-24 columns">
-        <img width="970" height="300" src="{{ site.baseurl }}/assets/images/{{ page.hero-image }}.jpg" class="" alt="" srcset="{{ site.baseurl }}/assets/images/{{ page.hero-image }}.jpg 970w, {{ site.baseurl }}/assets/images/{{ page.hero-image }}-300x93.jpg 300w, {{ site.baseurl }}/assets/images/{{ page.hero-image }}-768x238.jpg 768w" sizes="(max-width: 970px) 100vw, 970px"> </div>
+        <img width="970" height="300" src="{{ site.baseurl }}/assets/images/{{ page.hero-image }}.jpg" alt="" srcset="{{ site.baseurl }}/assets/images/{{ page.hero-image }}.jpg 970w, {{ site.baseurl }}/assets/images/{{ page.hero-image }}-300x93.jpg 300w, {{ site.baseurl }}/assets/images/{{ page.hero-image }}-768x238.jpg 768w" sizes="(max-width: 970px) 100vw, 970px">
+    </div>
+    {% endif %}
+    {% if page.permalink == '/leistungen/' %}
+    <main id="main" class="large-24 medium-24 columns" role="main">
+    {% else %}
     <main id="main" class="large-16 medium-16 columns" role="main">
+    {% endif %}
         <article role="article" itemscope="" itemtype="http://schema.org/WebPage">
 
-          <h1 class="page-title">{{ page.page-title }}</h1>
+          {% if page.page-title %}<h1 class="page-title">{{ page.page-title }}</h1>{% endif %}
 
           <section class="entry-content" itemprop="articleBody">
             {{ content }}
@@ -18,11 +25,9 @@ layout: default
         <!-- end article -->
     </main>
     <!-- end #main -->
+    {% unless page.permalink == '/leistungen/'%}
     <div id="sidebar1" class="sidebar large-8 medium-8 columns" role="complementary">
-        <!-- This content shows up if there are no widgets defined in the backend. -->
         <div class="alert">
-            <!--    <p>-->
-            <!--</p>-->
         </div>
         <div class="sidebar-cta-box">
             <div class="button">
@@ -37,4 +42,5 @@ layout: default
             </div>
         </div>
     </div>
+    {% endunless %}
 </div>

@@ -1,14 +1,14 @@
-div.wpcf7 {
+div.kontakt {
 	margin: 0;
 	padding: 0;
 }
 
-div.wpcf7-response-output {
+div.response-output {
 	margin: 2em 0.5em 1em;
 	padding: 0.2em 1em;
 }
 
-div.wpcf7 .screen-reader-response {
+div.kontakt .screen-reader-response {
 	position: absolute;
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -19,34 +19,34 @@ div.wpcf7 .screen-reader-response {
 	border: 0;
 }
 
-div.wpcf7-mail-sent-ok {
+div.kontakt-mail-sent-ok {
 	border: 2px solid #398f14;
 }
 
-div.wpcf7-mail-sent-ng {
+div.kontakt-mail-sent-ng {
 	border: 2px solid #ff0000;
 }
 
-div.wpcf7-spam-blocked {
+div.kontakt-spam-blocked {
 	border: 2px solid #ffa500;
 }
 
-div.wpcf7-validation-errors {
+div.kontakt-validation-errors {
 	border: 2px solid #f7e700;
 }
 
-.wpcf7-form-control-wrap {
+.control-wrap {
 	position: relative;
 }
 
-span.wpcf7-not-valid-tip {
+span.kontakt-not-valid-tip {
 	color: #f00;
 	font-size: 1em;
 	font-weight: normal;
 	display: block;
 }
 
-.use-floating-validation-tip span.wpcf7-not-valid-tip {
+.use-floating-validation-tip span.kontakt-not-valid-tip {
 	position: absolute;
 	top: 20%;
 	left: 20%;
@@ -56,21 +56,21 @@ span.wpcf7-not-valid-tip {
 	padding: .2em .8em;
 }
 
-span.wpcf7-list-item {
+span.kontakt-list-item {
 	display: inline-block;
 	margin: 0 0 0 1em;
 }
 
-span.wpcf7-list-item-label::before,
-span.wpcf7-list-item-label::after {
+span.kontakt-list-item-label::before,
+span.kontakt-list-item-label::after {
 	content: " ";
 }
 
-.wpcf7-display-none {
+.display-none {
 	display: none;
 }
 
-div.wpcf7 .ajax-loader {
+div.kontakt .ajax-loader {
 	visibility: hidden;
 	display: inline-block;
 	background-image: url('../../images/ajax-loader.gif');
@@ -82,26 +82,26 @@ div.wpcf7 .ajax-loader {
 	vertical-align: middle;
 }
 
-div.wpcf7 .ajax-loader.is-active {
+div.kontakt .ajax-loader.is-active {
 	visibility: visible;
 }
 
-div.wpcf7 div.ajax-error {
+div.kontakt div.ajax-error {
 	display: none;
 }
 
-div.wpcf7 .placeheld {
+div.kontakt .placeheld {
 	color: #888;
 }
 
-div.wpcf7 .wpcf7-recaptcha iframe {
+div.kontakt .kontakt-recaptcha iframe {
 	margin-bottom: 0;
 }
 
-div.wpcf7 input[type="file"] {
+div.kontakt input[type="file"] {
 	cursor: pointer;
 }
 
-div.wpcf7 input[type="file"]:disabled {
+div.kontakt input[type="file"]:disabled {
 	cursor: default;
 }
