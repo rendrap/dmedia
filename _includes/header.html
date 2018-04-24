@@ -13,21 +13,26 @@
                         </ul>
                     </div>
                     <div class="top-bar-right show-for-medium">
-                        <ul id="menu-main-menu-1" class="vertical medium-horizontal menu dropdown" data-dropdown-menu>
-                            <li><a href="{{ site.baseurl }}/">Home</a></li>
-                            <li><a href="{{ site.baseurl }}/service/">Service</a></li>
-                            <li ><a href="{{ site.baseurl }}/leistungen/">Leistungen</a>
-                                <ul class="menu">
-                                    <li><a href="{{ site.baseurl }}/beratung-internet-marketing/">Beratung Internet Marketing</a></li>
-                                    <li><a href="{{ site.baseurl }}/content-marketing/">Content Marketing</a></li>
-                                    <li><a href="{{ site.baseurl }}/content-management/">Content Management</a></li>
-                                    <li><a href="{{ site.baseurl }}/conversion-optimierung/">Conversion Optimierung</a></li>
-                                    <li><a href="{{ site.baseurl }}/redaktion/">Redaktion</a></li>
-                                    <li><a href="{{ site.baseurl }}/online-werbung/">Online Werbung</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="{{ site.baseurl }}/agentur/">Agentur</a></li>
-                            <li><a href="{{ site.baseurl }}/kontakt/">Kontakt</a></li>
+                        <ul class="vertical medium-horizontal menu dropdown" data-dropdown-menu>
+                            {% for item in site.data.topnav %}
+                                {% if item.name == page.title %}
+                                {% assign active_class = "active" %}
+                                {% else %}
+                                {% assign active_class = "" %}
+                                {% endif %}
+
+                                {% if item.children %}
+                                <li class="{{active_class}}"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a>
+                                    <ul class="menu">
+                                        {% for child in item.children %}
+                                        <li><a href="{{ site.baseurl }}{{ child.path }}">{{ child.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                {% else %}
+                                <li class="{{active_class}}"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a></li>
+                                {% endif %}
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="top-bar-right float-right show-for-small-only">
@@ -41,4 +46,3 @@
         </div>
     </header>
 </header>
-<div></div>
