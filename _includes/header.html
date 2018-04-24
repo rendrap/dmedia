@@ -22,7 +22,7 @@
                                 {% endif %}
 
                                 {% if item.children %}
-                                <li class="{{active_class}}"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a>
+                                <li class="{{active_class}} is-dropdown-submenu-parent"><a href="{{ site.baseurl }}{{ item.path }}">{{ item.name }}</a>
                                     <ul class="menu">
                                         {% for child in item.children %}
                                         <li><a href="{{ site.baseurl }}{{ child.path }}">{{ child.name }}</a></li>
