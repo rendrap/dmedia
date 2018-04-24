@@ -464,6 +464,122 @@ ul.footer-contact li a {
   color: #808080;
 }
 
+
+/* ****************************************** */
+/* ************** END Footer **************** */
+/* ****************************************** */
+
+.hero-image {
+  position: relative;
+  width: 100%; /* for IE 6 */
+}
+
+.hero-headline {
+  height: 300px;
+}
+
+
+@media screen and (max-width: 39.9375em) {
+  .hero-headline h1 {
+    top: 10%;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 90%;
+    position: relative;
+  }
+
+  .hero-image h1 {
+    position: absolute;
+    text-align: right;
+    top: 20px;
+    left: 0;
+    width: 100%;
+  }
+  .hero-image h1 span {
+    color: white;
+    font: normal .9rem/2.2rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+  }
+
+  .hero-image h1 span.spacer {
+    padding: 0 .3rem;
+    background-color: transparent;
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .hero-headline h1 {
+    top: 50%;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 90%;
+    position: relative;
+  }
+
+  .hero-image h1 {
+    position: absolute;
+    text-align: right;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+  .hero-image h1 span {
+    color: white;
+    font: bold 1.8rem/3.3rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+
+  .hero-image h1 span.spacer {
+    padding: 0 .3rem;
+    background-color: transparent;
+  }
+
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .hero-headline h1 {
+    top: 50%;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 90%;
+    position: relative;
+  }
+
+  .hero-image h1 {
+    position: absolute;
+    text-align: right;
+    top: 100px;
+    left: 0;
+    width: 100%;
+  }
+  .hero-image h1 span {
+    color: white;
+    font: bold 2rem/3.9rem Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+
+  .hero-image h1 span.spacer {
+    padding: 0 .3rem;
+    background-color: transparent;
+  }
+
+
+}
+
 /*********************
 ADDITIONAL CSS
 *********************/
